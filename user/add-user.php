@@ -7,13 +7,14 @@ require_once '../template/header.php';
 require_once '../template/navbar.php';
 require_once '../template/sidebar.php';
 
-// 
+// Get message parameter from url
 if (isset($_GET['msg'])) {
     $msg = $_GET['msg'];
 } else {
     $msg = "";
 }
 $alert = '';
+// check $msg value 
 if ($msg == "error") {
     $alert = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
             <i class="fa-solid fa-xmark"></i> Add user error, username already taken!
