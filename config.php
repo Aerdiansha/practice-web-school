@@ -35,7 +35,11 @@ function uploadimg($url)
     }
 
     // generate file name
-    $namafilebaru = rand(10, 1000) . '-' . $namafile;
+    if ($url = 'school-profile.php') {
+        $namafilebaru = rand(0, 50) . '-bgLogin.' . $fileExtension;
+    } else {
+        $namafilebaru = rand(10, 1000) . '-' . $namafile;
+    }
 
     // upload images
     move_uploaded_file($tmp, "../assets/image/" . $namafilebaru);
