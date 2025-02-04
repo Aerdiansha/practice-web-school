@@ -4,8 +4,7 @@
 try {
     $connection = mysqli_connect('localhost', 'root', '', 'db_sekolah');
     // echo "koneksi berhasil";
-} 
-catch (Exception $e) {
+} catch (Exception $e) {
     echo "Connection failed: " . $e->getMessage();
 }
 
@@ -13,7 +12,8 @@ catch (Exception $e) {
 $main_url = "http://localhost/practice-web-sekolah/";
 
 // upload images function
-function uploadimg($url) {
+function uploadimg($url)
+{
     $namafile = $_FILES['image']['name'];
     $ukuran = $_FILES['image']['size'];
     $error = $_FILES['image']['error'];
@@ -29,16 +29,19 @@ function uploadimg($url) {
     }
 
     // cek file size
-    if($ukuran > 1000000){
+    if ($ukuran > 1000000) {
         header("Location:" . $url . "?msg=oversize");
         die;
     }
 
     // generate file name
-    $namafilebaru = rand(10, 1000) . '-' . $namafile;
+    if ($url = 'school-profile.php') {
+        $namafilebaru = rand(0, 50) . '-bgLogin' . $fileExtension;
+    } else {
+        $namafilebaru = rand(10, 1000) . '-' . $namafile;
+    }
 
     // upload images
     move_uploaded_file($tmp, "../assets/image/" . $namafilebaru);
     return $namafilebaru;
-
 }
