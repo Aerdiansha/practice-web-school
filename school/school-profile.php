@@ -7,7 +7,6 @@ require_once '../template/header.php';
 require_once '../template/navbar.php';
 require_once '../template/sidebar.php';
 
-
 ?>
 
 <div id="layoutSidenav_content">
@@ -21,7 +20,7 @@ require_once '../template/sidebar.php';
             <div class="card">
                 <div class="card-header">
                     <span class="h5"><i class="fa-solid fa-pen-to-square"></i> School Data</span>
-                    <button type="submit" name="save" class="btn btn-success float-end"><i class="fa-solid fa-floppy-disk"></i> Save</button>
+                    <button type="submit" name="simpan" class="btn btn-success float-end"><i class="fa-solid fa-floppy-disk"></i> Save</button>
                     <button type="reset" name="reset" class="btn btn-danger float-end me-1"><i class="fa-solid fa-xmark"></i> Reset</button>
                 </div>
                 <div class="card-body">
@@ -33,10 +32,10 @@ require_once '../template/sidebar.php';
                         </div>
                         <div class="col-8">
                             <div class="mb-3 row">
-                                <label for="name" class="col-sm-2 col-form-label">Name</label>
-                                <label for="name" class="col-sm-1 col-form-label">:</label>
+                                <label for="nama" class="col-sm-2 col-form-label">Name</label>
+                                <label for="nama" class="col-sm-1 col-form-label">:</label>
                                 <div class="col-sm-9" style="margin-left: -70px;">
-                                    <input type="text" class="form-control border-0 border-bottom" id="name" name="name" value="" placeholder="School Name" require>
+                                    <input type="text" class="form-control border-0 border-bottom" id="nama" name="nama" value="" placeholder="School Name" require>
                                 </div>
                             </div>
                             <div class="mb-3 row">
@@ -58,10 +57,10 @@ require_once '../template/sidebar.php';
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="accreditation" class="col-sm-2 col-form-label">Accreditation</label>
-                                <label for="accreditation" class="col-sm-1 col-form-label">:</label>
+                                <label for="akreditasi" class="col-sm-2 col-form-label">Accreditation</label>
+                                <label for="akreditasi" class="col-sm-1 col-form-label">:</label>
                                 <div class="col-sm-9" style="margin-left: -70px;">
-                                    <select name="accreditation" id="accreditation" class="form-select border-0 border-bottom" require>
+                                    <select name="akreditasi" id="akreditasi" class="form-select border-0 border-bottom" require>
                                         <option value="" selected>--Choose Accreditation--</option>
                                         <option value="SSS">SSS</option>
                                         <option value="A">A</option>
@@ -72,10 +71,10 @@ require_once '../template/sidebar.php';
                                 </div>
                             </div>
                             <div class="mb-3 row">
-                                <label for="address" class="col-sm-2 col-form-label">Address</label>
-                                <label for="address" class="col-sm-1 col-form-label">:</label>
+                                <label for="alamat" class="col-sm-2 col-form-label">Address</label>
+                                <label for="alamat" class="col-sm-1 col-form-label">:</label>
                                 <div class="col-sm-9" style="margin-left: -70px;">
-                                    <textarea name="address" id="address" rows="3" class="form-control border-0 border-bottom" placeholder="Address" require></textarea>`
+                                    <textarea name="alamat" id="alamat" rows="3" class="form-control border-0 border-bottom" placeholder="Address" require></textarea>`
                                 </div>
                             </div>
                             <div class="mb-3 row">
