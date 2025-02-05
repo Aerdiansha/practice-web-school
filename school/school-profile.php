@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION['ssLogin'])) {
+    header("Location:../auth/login.php");
+    exit;
+}
+
 require_once '../config.php';
 
 $title = "School Profile";
@@ -7,6 +14,7 @@ require_once '../template/header.php';
 require_once '../template/navbar.php';
 require_once '../template/sidebar.php';
 
+// Get message parameter from url
 if (isset($_GET['msg'])) {
     $msg = $_GET['msg'];
 } else {

@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+
+// cek apakah user sudah login
+if(!isset($_SESSION['ssLogin'])) {
+    header("Location:auth/login.php");
+    exit;
+}
+
 require_once 'config.php';
 
 $title = "Dashboard - SMK ISEKAI 1";

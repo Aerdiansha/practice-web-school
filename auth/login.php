@@ -1,7 +1,15 @@
 <?php
 
+session_start();
+
+if(isset($_SESSION['ssLogin'])) {
+    header("Location:../index.php");
+    exit;       
+}
+
 require_once '../config.php';
 
+// ambil data sekolah
 $school = mysqli_query($connection, "SELECT * FROM `data_sekolah` WHERE `id` = 1");
 $data = mysqli_fetch_array($school);
 ?>

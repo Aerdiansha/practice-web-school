@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 require_once '../config.php';
 
 // jika tombol login ditekan
@@ -14,6 +16,8 @@ if(isset($_POST['login'])) {
         $row = mysqli_fetch_assoc($result);
         // cek password
         if(password_verify($password, $row['password'])){
+            $_SESSION['ssLogin'] = true;
+            $_SESSION['ssUser'] = $username;
             header("Location:../index.php");
             exit;
         } else {
