@@ -49,11 +49,11 @@ if ($msg == "updated") {
                 <li class="breadcrumb-item active">Change Password</li>
             </ol>
             <form action="process-password.php" method="POST">
-                <?php 
-                if($msg !== '') {
+                <?php
+                if ($msg !== '') {
                     echo $alert;
                 }
-                
+
                 ?>
                 <div class="card">
                     <h5 class="card-header"><span class="h5 my-5"><i class="fa-solid fa-pen-to-square"></i> Change Password</span>

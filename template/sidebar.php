@@ -20,7 +20,7 @@
                             </a>
                             <hr class="mb-0">
                             <div class="sb-sidenav-menu-heading">DATA</div>
-                            <a class="nav-link" href="<?= $main_url ?>index.php">
+                            <a class="nav-link" href="<?= $main_url ?>student/student.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
                                 Student
                             </a>
