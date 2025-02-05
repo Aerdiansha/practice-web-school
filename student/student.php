@@ -29,7 +29,7 @@ require_once '../template/sidebar.php';
                     <a href="<?= $main_url ?>student/add-student.php" class="btn btn-success float-end"><i class="fa-solid fa-plus"></i> Add student</a>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover table-striped">
+                    <table class="table table-hover table-striped" id="datatablesSimple">
                         <thead>
                             <tr>
                                 <th scope="col">No.</th>
@@ -57,19 +57,25 @@ require_once '../template/sidebar.php';
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Photo</td>
-                                <td>NIS</td>
-                                <td>Name</td>
-                                <td>Class</td>
-                                <td>Major</td>
-                                <td>Address</td>
-                                <td align="center">
-                                    <a href="" class="btn btn-sm btn-warning" title="Update student"><i class="fa solid fa-pen"></i></a>
-                                    <a href="" class="btn btn-sm btn-danger" title="Delete student"><i class="fa solid fa-trash"></i></a>
-                                </td>
-                            </tr>
+                            <?php
+
+                            $no = 1;
+                            $queryStudent = mysqli_query($connection, "SELECT * FROM data_siswa");
+                            while ($data = mysqli_fetch_array($queryStudent)) { ?>
+                                <tr>
+                                    <th scope="row"><?= $no++ ?></th>
+                                    <td align="center"><img src="../assets/image/<?= $data['foto'] ?>" class="rounded-circle" width="60px" alt=""></td>
+                                    <td><?= $data['nis'] ?></td>
+                                    <td><?= $data['nama'] ?></td>
+                                    <td><?= $data['kelas'] ?></td>
+                                    <td><?= $data['jurusan'] ?></td>
+                                    <td><?= $data['alamat'] ?></td>
+                                    <td align="center">
+                                        <a href="" class="btn btn-sm btn-warning" title="Update student"><i class="fa solid fa-pen"></i></a>
+                                        <a href="" class="btn btn-sm btn-danger" title="Delete student"><i class="fa solid fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            <?php  } ?>
                         </tbody>
                     </table>
                 </div>
