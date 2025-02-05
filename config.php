@@ -35,7 +35,7 @@ function uploadimg($url)
     }
 
     // generate file name
-    if ($url = 'school-profile.php') {
+    if ($url == 'school-profile.php') {
         $namafilebaru = rand(0, 50) . '-bgLogin.' . $fileExtension;
     } else {
         $namafilebaru = rand(10, 1000) . '-' . $namafile;

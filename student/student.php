@@ -71,8 +71,8 @@ require_once '../template/sidebar.php';
                                     <td><?= $data['jurusan'] ?></td>
                                     <td><?= $data['alamat'] ?></td>
                                     <td align="center">
-                                        <a href="" class="btn btn-sm btn-warning" title="Update student"><i class="fa solid fa-pen"></i></a>
-                                        <a href="" class="btn btn-sm btn-danger" title="Delete student"><i class="fa solid fa-trash"></i></a>
+                                        <a href="edit-student.php?nis=<?= $data['nis']; ?>" class="btn btn-sm btn-warning" title="Update student"><i class="fa solid fa-pen"></i></a>
+                                        <a href="delete-student.php?nis=<?= $data['nis']; ?>&foto=<?= $data['foto']; ?>" class="btn btn-sm btn-danger" title="Delete student" onclick="return confirm('Delete data?')"><i class="fa solid fa-trash"></i></a>
                                     </td>
                                 </tr>
                             <?php  } ?>
