@@ -24,7 +24,7 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-users"></i></div>
                                 Student
                             </a>
-                            <a class="nav-link" href="<?= $main_url ?>index.php">
+                            <a class="nav-link" href="<?= $main_url ?>teacher/teacher.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
                                 Teacher
                             </a>
